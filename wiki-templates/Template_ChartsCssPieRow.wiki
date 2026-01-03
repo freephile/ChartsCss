@@ -1,0 +1,13 @@
+<includeonly>
+<tr>
+  <th scope="row">{{{label|}}}</th>
+{{{cells|}}}
+</tr>
+</includeonly><noinclude>
+== Template:ChartsCss pie row ==
+Helper for `Template:ChartsCss pie multiple`.
+
+=== Parameters ===
+* `label`: row label
+* `cells`: one or more `Template:ChartsCss pie cell` expansions
+</noinclude>

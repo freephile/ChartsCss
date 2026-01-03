@@ -1,0 +1,39 @@
+{
+	"name": "ChartsCss",
+	"version": "0.1.0",
+	"author": [
+		"Greg Rundlett <greg.rundlett@gmail.com>"
+	],
+	"url": "https://chartscss.org/",
+	"descriptionmsg": "chartscss-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"MessagesDirs": {
+		"ChartsCss": [
+			"i18n"
+		]
+	},
+	"AutoloadClasses": {
+		"ChartsCss\\ChartsCssHooks": "includes/ChartsCssHooks.php"
+	},
+	"Hooks": {
+		"ParserFirstCallInit": [
+			"ChartsCss\\ChartsCssHooks::onParserFirstCallInit"
+		]
+	},
+	"ResourceModules": {
+		"ext.chartscss": {
+			"styles": [
+				"modules/ext.chartscss/charts.min.css"
+			],
+			"targets": [
+				"desktop",
+				"mobile"
+			]
+		}
+	},
+	"manifest_version": 2
+}

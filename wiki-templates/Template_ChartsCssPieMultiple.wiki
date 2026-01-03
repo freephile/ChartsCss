@@ -1,0 +1,56 @@
+<includeonly><chartscss>
+<table class="charts-css pie multiple {{{classes|}}}">
+  {{#if:{{{caption|}}}|<caption>{{{caption}}}</caption>}}
+
+  <thead>
+    <tr>
+{{{headers|      <th scope="col">Year</th>
+      <th scope="col">Progress 1</th>
+      <th scope="col">Progress 2</th>
+      <th scope="col">Progress 3</th>}}}
+    </tr>
+  </thead>
+
+  <tbody>
+{{{rows|}}}
+  </tbody>
+</table>
+</chartscss></includeonly><noinclude>
+== Template:ChartsCss pie multiple ==
+Renders a Charts.css multi-dataset pie chart table (`pie multiple`) and loads the stylesheet.
+
+This is useful when each row has multiple pie segments (multiple `<td>` cells).
+
+=== Parameters ===
+* `classes` (optional): additional Charts.css classes, e.g. `show-labels show-data-on-hover show-primary-axis show-data-axes`
+* `caption` (optional): table caption
+* `headers` (optional): raw `<th>...</th>` markup for the header row (for full control)
+* `rows`: wikitext that expands to one or more rows (typically via `Template:ChartsCss pie row`)
+
+=== Example ===
+<pre>
+{{ChartsCss pie multiple
+ | classes=show-labels show-data-on-hover show-primary-axis show-data-axes
+ | caption=Chart Heading
+ | headers=
+   <th scope="col">Year</th>
+   <th scope="col">Progress 1</th>
+   <th scope="col">Progress 2</th>
+   <th scope="col">Progress 3</th>
+ | rows=
+   {{ChartsCss pie row | label=2000 | cells=
+     {{ChartsCss pie cell | start=0.1 | end=0.5 | data=50 }}
+     {{ChartsCss pie cell | start=0.0 | end=0.2 | data=20 }}
+     {{ChartsCss pie cell | start=0.2 | end=0.4 | data=40 }}
+   }}
+   {{ChartsCss pie row | label=2010 | cells=
+     {{ChartsCss pie cell | start=0.5 | end=0.8 | data=80 }}
+     {{ChartsCss pie cell | start=0.2 | end=0.5 | data=50 }}
+     {{ChartsCss pie cell | start=0.4 | end=0.1 | data=10 }}
+   }}
+}}
+</pre>
+
+Notes:
+* Each `ChartsCss pie cell` uses `--start`/`--end` in the `0.0`..`1.0` range.
+</noinclude>

@@ -1,0 +1,16 @@
+<includeonly>
+<tr>
+  <th scope="row">{{{label|}}}</th>
+  <td style="--start: {{{start|0}}}; --end: {{{end|0}}};">{{#if:{{{data|}}}|<span class="data">{{{data}}}</span>}} {{#if:{{{tooltip|}}}|<span class="tooltip">{{{tooltip}}}</span>}}</td>
+</tr>
+</includeonly><noinclude>
+== Template:ChartsCss slice ==
+Helper for `Template:ChartsCss pie`.
+
+=== Parameters ===
+* `label`: row label
+* `start`: raw CSS value for `--start` (usually `0.0`..`1.0`)
+* `end`: raw CSS value for `--end` (usually `0.0`..`1.0`)
+* `data` (optional): value shown in a `<span class="data">…</span>`
+* `tooltip` (optional): tooltip HTML/wikitext shown in a `<span class="tooltip">…</span>`
+</noinclude>

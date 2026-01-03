@@ -1,0 +1,12 @@
+<includeonly>
+<td style="--start: {{{start|0}}}; --end: {{{end|0}}};">{{#if:{{{data|}}}|<span class="data">{{{data}}}</span>}} {{#if:{{{tooltip|}}}|<span class="tooltip">{{{tooltip}}}</span>}}</td>
+</includeonly><noinclude>
+== Template:ChartsCss pie cell ==
+Outputs a single `<td>` for a pie chart dataset.
+
+=== Parameters ===
+* `start`: raw CSS value for `--start`
+* `end`: raw CSS value for `--end`
+* `data` (optional): value shown in a `<span class="data">…</span>`
+* `tooltip` (optional): tooltip content shown in a `<span class="tooltip">…</span>`
+</noinclude>

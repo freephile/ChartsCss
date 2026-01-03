@@ -1,0 +1,14 @@
+<includeonly>
+<tr>
+  <th scope="row">{{{label|}}}</th>
+  <td style="--size: {{{size|0}}};">{{{value|}}}</td>
+</tr>
+</includeonly><noinclude>
+== Template:ChartsCss row ==
+Helper for `Template:ChartsCss column`.
+
+=== Parameters ===
+* `label`: row label
+* `size`: raw CSS value for `--size` (e.g. `0.4` or `calc(40 / 100)`)
+* `value`: cell content (text or HTML like `<br/>`)
+</noinclude>

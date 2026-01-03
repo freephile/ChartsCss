@@ -1,0 +1,3 @@
+{
+	"chartscss-desc": "Adds Charts.css (pure CSS charts) to MediaWiki via ResourceLoader and a <chartscss> tag."
+}

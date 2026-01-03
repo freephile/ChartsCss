@@ -1,0 +1,46 @@
+<includeonly><chartscss>
+<table class="charts-css {{{type|column}}} {{{classes|}}}">
+  {{#if:{{{caption|}}}|<caption>{{{caption}}}</caption>}}
+
+  <thead>
+    <tr>
+      <th scope="col">{{{xHeader|}}}</th>
+      <th scope="col">{{{yHeader|}}}</th>
+    </tr>
+  </thead>
+
+  <tbody>
+{{{rows|}}}
+  </tbody>
+</table>
+</chartscss></includeonly><noinclude>
+== Template:ChartsCss column ==
+Renders a Charts.css chart table and loads the stylesheet (via the `<chartscss>` tag).
+
+=== Parameters ===
+* `type` (optional): chart type class, e.g. `column`, `bar`, `line`, `area`
+* `classes` (optional): additional Charts.css classes, e.g. `show-primary-axis show-4-secondary-axes data-spacing-4 reverse-data`
+* `caption` (optional): table caption
+* `xHeader`, `yHeader`: column headings
+* `rows`: wikitext that expands to one or more `<tr>...</tr>` rows (typically via `Template:ChartsCss row`)
+
+=== Example ===
+<pre>
+{{ChartsCss column
+ | type=column
+ | classes=show-primary-axis show-4-secondary-axes data-spacing-4 reverse-data
+ | caption=Front End Developer Salary
+ | xHeader=Year
+ | yHeader=Income
+ | rows=
+   {{ChartsCss row | label=2016 | size=calc(40 / 100) | value=$ 40K }}
+   {{ChartsCss row | label=2017 | size=calc(60 / 100) | value=$ 60K }}
+   {{ChartsCss row | label=2018 | size=calc(75 / 100) | value=$ 75K }}
+   {{ChartsCss row | label=2019 | size=calc(90 / 100) | value=$ 90K }}
+   {{ChartsCss row | label=2020 | size=calc(100 / 100) | value=$ 100K<br/>👑 }}
+}}
+</pre>
+
+Notes:
+* `size` is a raw CSS value for the `--size` custom property. Common forms are `0.4` or `calc(40 / 100)`.
+</noinclude>
