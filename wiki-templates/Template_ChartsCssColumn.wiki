@@ -1,17 +1,13 @@
 <includeonly><chartscss>
-<table class="charts-css {{{type|column}}} {{{classes|}}}">
+<table class="charts-css {{{type|column}}} {{{classes|show-heading show-labels show-primary-axis show-4-secondary-axes data-spacing-4}}}">
   {{#if:{{{caption|}}}|<caption>{{{caption}}}</caption>}}
 
-  <thead>
-    <tr>
-      <th scope="col">{{{xHeader|}}}</th>
-      <th scope="col">{{{yHeader|}}}</th>
-    </tr>
-  </thead>
+  <tr>
+    <th scope="col">{{{xHeader|}}}</th>
+    <th scope="col">{{{yHeader|}}}</th>
+  </tr>
 
-  <tbody>
 {{{rows|}}}
-  </tbody>
 </table>
 </chartscss></includeonly><noinclude>
 == Template:ChartsCss column ==
@@ -43,4 +39,5 @@ Renders a Charts.css chart table and loads the stylesheet (via the `<chartscss>`
 
 Notes:
 * `size` is a raw CSS value for the `--size` custom property. Common forms are `0.4` or `calc(40 / 100)`.
+* MediaWiki does not accept table sectioning/column elements like `<thead>`, `<tbody>`, `<tfoot>`, `<colgroup>`, and `<col>` (even when you use HTML syntax in wikitext). If you copy examples from chartscss.org that use these elements, they may be stripped or ignored. This template intentionally avoids them.
 </noinclude>

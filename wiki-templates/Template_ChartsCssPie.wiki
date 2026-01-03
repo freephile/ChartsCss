@@ -2,16 +2,12 @@
 <table class="charts-css pie {{{classes|}}}">
   {{#if:{{{caption|}}}|<caption>{{{caption}}}</caption>}}
 
-  <thead>
-    <tr>
-      <th scope="col">{{{labelHeader|}}}</th>
-      <th scope="col">{{{valueHeader|}}}</th>
-    </tr>
-  </thead>
+  <tr>
+    <th scope="col">{{{labelHeader|}}}</th>
+    <th scope="col">{{{valueHeader|}}}</th>
+  </tr>
 
-  <tbody>
 {{{slices|}}}
-  </tbody>
 </table>
 </chartscss></includeonly><noinclude>
 == Template:ChartsCss pie ==
@@ -41,4 +37,5 @@ Renders a Charts.css pie chart table and loads the stylesheet (via the `<chartsc
 
 Notes:
 * `start`/`end` should be values from `0.0` to `1.0` (fractions of the circle).
+* MediaWiki does not accept table sectioning/column elements like `<thead>`, `<tbody>`, `<tfoot>`, `<colgroup>`, and `<col>` (even when you use HTML syntax in wikitext). If you copy examples from chartscss.org that use these elements, they may be stripped or ignored. This template intentionally avoids them.
 </noinclude>

@@ -2,18 +2,14 @@
 <table class="charts-css pie multiple {{{classes|}}}">
   {{#if:{{{caption|}}}|<caption>{{{caption}}}</caption>}}
 
-  <thead>
-    <tr>
+  <tr>
 {{{headers|      <th scope="col">Year</th>
       <th scope="col">Progress 1</th>
       <th scope="col">Progress 2</th>
       <th scope="col">Progress 3</th>}}}
-    </tr>
-  </thead>
+  </tr>
 
-  <tbody>
 {{{rows|}}}
-  </tbody>
 </table>
 </chartscss></includeonly><noinclude>
 == Template:ChartsCss pie multiple ==
@@ -53,4 +49,5 @@ This is useful when each row has multiple pie segments (multiple `<td>` cells).
 
 Notes:
 * Each `ChartsCss pie cell` uses `--start`/`--end` in the `0.0`..`1.0` range.
+* MediaWiki does not accept table sectioning/column elements like `<thead>`, `<tbody>`, `<tfoot>`, `<colgroup>`, and `<col>` (even when you use HTML syntax in wikitext). If you copy examples from chartscss.org that use these elements, they may be stripped or ignored. This template intentionally avoids them.
 </noinclude>

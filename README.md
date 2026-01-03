@@ -28,19 +28,15 @@ wfLoadExtension( 'ChartsCss' );
 <chartscss>
 <table class="charts-css column show-primary-axis show-4-secondary-axes data-spacing-4 reverse-data">
   <caption>Front End Developer Salary</caption>
-  <thead>
-    <tr>
-      <th scope="col">Year</th>
-      <th scope="col">Income</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><th scope="row">2016</th><td style="--size: calc(40 / 100);">$40K</td></tr>
-    <tr><th scope="row">2017</th><td style="--size: calc(60 / 100);">$60K</td></tr>
-    <tr><th scope="row">2018</th><td style="--size: calc(75 / 100);">$75K</td></tr>
-    <tr><th scope="row">2019</th><td style="--size: calc(90 / 100);">$90K</td></tr>
-    <tr><th scope="row">2020</th><td style="--size: calc(100 / 100);">$100K</td></tr>
-  </tbody>
+  <tr>
+    <th scope="col">Year</th>
+    <th scope="col">Income</th>
+  </tr>
+  <tr><th scope="row">2016</th><td style="--size: calc(40 / 100);">$40K</td></tr>
+  <tr><th scope="row">2017</th><td style="--size: calc(60 / 100);">$60K</td></tr>
+  <tr><th scope="row">2018</th><td style="--size: calc(75 / 100);">$75K</td></tr>
+  <tr><th scope="row">2019</th><td style="--size: calc(90 / 100);">$90K</td></tr>
+  <tr><th scope="row">2020</th><td style="--size: calc(100 / 100);">$100K</td></tr>
 </table>
 </chartscss>
 ```
@@ -81,6 +77,7 @@ The key requirement is that each data cell needs CSS custom properties like `--s
 
 - Charts.css is **CSS-only**: no JS is required.
 - If your wiki configuration strips inline styles, you may need to allow CSS variables in inline styles for the `--size`/`--start`/`--end` attributes to work.
+- MediaWiki does not support table sectioning/column elements like `<col>`, `<colgroup>`, `<thead>`, `<tbody>`, and `<tfoot>`. The examples and bundled templates avoid relying on those elements. -ref. https://www.mediawiki.org/wiki/Help:Tables
 
 ## License
 

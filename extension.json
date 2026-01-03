@@ -2,14 +2,14 @@
 	"name": "ChartsCss",
 	"version": "0.1.0",
 	"author": [
-		"Greg Rundlett <greg.rundlett@gmail.com>"
+		"[https://github.com/freephile/ Greg Rundlett]"
 	],
-	"url": "https://chartscss.org/",
+	"url": "https://github.com/freephile/ChartsCss",
 	"descriptionmsg": "chartscss-desc",
 	"license-name": "GPL-2.0-or-later",
 	"type": "parserhook",
 	"requires": {
-		"MediaWiki": ">= 1.35.0"
+		"MediaWiki": ">= 1.43.0"
 	},
 	"MessagesDirs": {
 		"ChartsCss": [
@@ -23,6 +23,10 @@
 		"ParserFirstCallInit": [
 			"ChartsCss\\ChartsCssHooks::onParserFirstCallInit"
 		]
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteExtPath": "ChartsCss"
 	},
 	"ResourceModules": {
 		"ext.chartscss": {
