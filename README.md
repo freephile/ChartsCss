@@ -1,6 +1,22 @@
 # ChartsCss MediaWiki Extension
 
-This extension packages the compiled **Charts.css** stylesheet as a ResourceLoader module and provides a `<chartscss>...</chartscss>` tag that automatically loads it on pages that use the tag.
+This extension is a proof-of-concept for using the https://chartscss.org/ project in MediaWiki. There may be a critical mismatch for using ChartsCSS in MediaWiki in that the CSS is based (in part) on the <tbody> tag which is not allowed in MediaWiki wikitext.
+
+This extension packages the compiled **Charts.css** stylesheet from https://chartscss.org as a ResourceLoader module and provides a `<chartscss>...</chartscss>` tag that automatically loads it on pages that use the tag.
+
+A goal of this extension is to actually package convenience templates (perhaps one template for each chart type) to make it easier for authors to use the styles without having to learn much code if anything.  Current templates use `#if` from [Extension:ParserFunctions](https://www.mediawiki.org/wiki/Extension:ParserFunctions), so that is a soft dependency. Aside from listing the contents of templates in the source a goal would be to package the templates into a [Page Exchange](https://www.mediawiki.org/wiki/Extension:Page_Exchange) package.
+
+We may create a SpecialPage where there is an interactive chart builder like https://chartscss.org/examples/chart-builder/.
+
+## Alternatives
+
+You could just simply load the CSS in [MediaWiki:Common.css](https://www.mediawiki.org/wiki/MediaWiki:Common.css) instead of installing this extension. See https://www.mediawiki.org/wiki/Manual:CSS  The advantage of creating (and using) an extension is that the added CSS only gets loaded for pages that use it via the <chartscss> tag instead of loading it on every page load.
+
+[Extension:CSS](https://www.mediawiki.org/wiki/Extension:CSS) will allow you to store CSS on any page on your wiki, which would be another way of including the Charts CSS into your wiki.
+
+A Gadget could be created to accomplish much of the goals of this extension.
+
+We could potentially use [TemplateStyles](https://en.wikipedia.org/wiki/Wikipedia:TemplateStyles) with Styles for each template and a template for each chart type but it's not clear if such an approach would offer any advantage. It certainly would be more confusing and cumbersome.
 
 ## Install
 
