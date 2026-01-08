@@ -4,6 +4,11 @@ This extension is a **proof-of-concept** for using the https://chartscss.org/ pr
 
 This extension packages the compiled **Charts.css** stylesheet from https://chartscss.org as a ResourceLoader module and provides a `<chartscss>...</chartscss>` tag that automatically loads it on pages that use the tag.
 
+Prototype example showing axis label problems:
+
+<img width="734" height="746" alt="image" src="https://github.com/user-attachments/assets/1a5c0a36-f748-4599-b818-b1efca5aa1fb" />
+
+
 ## Goals
 
 A goal of this extension is to actually **package convenience templates** (perhaps one template for each chart type) to make it easier for authors to use the styles without having to learn much code if anything. The templates are included in the source tree in the `wiki-templates` directory. Current templates use `#if` from [Extension:ParserFunctions](https://www.mediawiki.org/wiki/Extension:ParserFunctions), so that is a soft dependency.
